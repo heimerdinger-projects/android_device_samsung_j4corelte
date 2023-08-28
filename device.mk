@@ -28,6 +28,21 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/s5k5e3yx_f2_2_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k5e3yx_f2_2_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/s5k5e9yx_q05ql_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k5e9yx_q05ql_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/sdm450_camera_j4corelte.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sdm450_camera_j4corelte.xml
+
+# Display
+PRODUCT_PACKAGES += \
+    gralloc.msm8937
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service \
+    lights.msm8937
+    
+# Keymaster    
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service 
     
 # Shims
 PRODUCT_PACKAGES += \

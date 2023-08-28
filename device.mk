@@ -33,6 +33,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gralloc.msm8937
 
+# Do not spin up a separate process for the network stack on go devices, use an in-process APK.
+PRODUCT_PACKAGES += InProcessNetworkStack
+PRODUCT_PACKAGES += CellBroadcastAppPlatform
+PRODUCT_PACKAGES += CellBroadcastServiceModulePlatform
+PRODUCT_PACKAGES += com.android.tethering.inprocess
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \

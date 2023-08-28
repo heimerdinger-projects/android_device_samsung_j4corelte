@@ -24,6 +24,10 @@ TARGET_OTA_ASSERT_DEVICE := j4corelte, j4coreltejx
 TARGET_BOOTLOADER_BOARD_NAME := RG13A002KU
 TARGET_NO_BOOTLOADER := true
 
+# Camera
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+    /vendor/bin/mm-qcamera-daemon=27
+
 # Display
 TARGET_SCREEN_DENSITY := 320
 
@@ -48,6 +52,10 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := msm8937
+
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /system/vendor/lib/libsensorndkbridge.so|libbase_shim.so
 
 # SurfaceFlinger
 TARGET_USE_QCOM_SURFACEFLINGER := true

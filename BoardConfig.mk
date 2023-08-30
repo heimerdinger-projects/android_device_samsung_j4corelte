@@ -38,6 +38,8 @@ TARGET_USES_MKE2FS := true
 # Kernel
 TARGET_KERNEL_CONFIG := j4corelte_defconfig
 TARGET_KERNEL_HEADER_ARCH := arm
+TARGET_KERNEL_ARCH := arm
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 # Low RAM Devices
 TARGET_HAS_LOW_RAM := true
